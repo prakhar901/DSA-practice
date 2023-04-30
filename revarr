@@ -1,0 +1,39 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+
+void print(int arr[],int index,int size)
+{
+    //base case
+if(index==size)
+
+    return;
+    
+    //ek case solve krdo
+    
+cout<<arr[index]<<" , ";
+
+//recursive call
+
+print(arr,index+1,size);
+}
+void revprint(int arr[],int index){
+//base case
+if(index<0)
+return;
+
+cout<<arr[index]<<" ";
+//rr
+
+revprint(arr,index-1);
+}
+int main()
+{
+    int arr[]={1,3,4,5};
+    int size=4;
+    revprint(arr,size-1);
+    cout<<endl;
+    
+     return 0;
+    
+}

@@ -1,0 +1,19 @@
+#include<iostream>
+#include<climits>
+using namespace std;
+int getmax(int arr[],int size,int index){
+    //base case
+    if(index==size)
+    return INT_MIN;
+    int ans= arr[index];
+    int recans=getmax(arr,size,index+1);
+    return max(ans,recans);
+}
+int main()
+{
+    int arr[]={7,2,15,9,21,18};
+    int size=6;
+    cout<< getmax(arr,size,0);
+    cout<<endl;
+    return 0;
+}

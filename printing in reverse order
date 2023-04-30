@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+void print(int f){
+    //base case
+    if(f==0)
+    return;
+    cout<<f<<endl;
+    print(f-1);
+}
+int main()
+{
+    int f;
+    cout<<"enter the value of n";
+    cin>>f;
+    cout<<"printing in decreasing order"<<endl;
+    print(f);
+return 0;
+}
